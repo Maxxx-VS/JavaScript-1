@@ -81,37 +81,37 @@
 // }
 
 
-// let a = prompt("Введите строку")
-// s = a.length
+let a = prompt("Введите строку")
+s = a.length
 
-// for (let i = s; i>0; i--){
-//     console.log(a.charAt(i))
-// }
-
-
-// function coll(){
-//     let a = prompt("Число для Гипотезы Коллатца")
-//     while (a != 1){
-//         if (a % 2 == 0){
-//             a = a / 2
-//         }else{
-//             a = ((a * 3) + 1)
-//         }
-//     console.log(a)
-// }
-// }
+for (let i = s; i>0; i--){
+    console.log(a.charAt(i))
+}
 
 
-// let name = prompt("Напишите имя")
-// let age = prompt("Уточните возраст")
+function coll(){
+    let a = prompt("Число для Гипотезы Коллатца")
+    while (a != 1){
+        if (a % 2 == 0){
+            a = a / 2
+        }else{
+            a = ((a * 3) + 1)
+        }
+    console.log(a)
+}
+}
 
-// function name_age(){
 
-//     l = name + " имеет возраст " + age + " и он зрелый "
-//     console.log(l)
-//     coll()
-// }
-// name_age()
+let name = prompt("Напишите имя")
+let age = prompt("Уточните возраст")
+
+function name_age(){
+
+    l = name + " имеет возраст " + age + " и он зрелый "
+    console.log(l)
+    coll()
+}
+name_age()
 
 
 
@@ -136,7 +136,6 @@ function massif(){
         console.log('Все четные');
     }
 }
-
 massif()
 
 function massif(){
@@ -160,7 +159,6 @@ function massif(){
         console.log('Все элементы четные');
     }
 }
-
 massif()
 
 function massif(){
@@ -181,6 +179,5 @@ function massif(){
 
     
 }
-
 massif()
 
