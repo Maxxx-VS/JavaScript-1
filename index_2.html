@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var num = [];
+
+        function calc_1(){
+            var nmberInput = document.getElementById("nmberInput").value;
+            var nmberInput_1 = document.getElementById("nmberInput_1").value;
+            var resultElement = document.getElementById("result");
+            var result = nmberInput * nmberInput_1;
+            resultElement.innerHTML = "Результат: " + result;
+            num.push(result);
+        }
+        function calc_2(){
+            var nmberInput = document.getElementById("nmberInput").value;
+            var nmberInput_1 = document.getElementById("nmberInput_1").value;
+            var resultElement = document.getElementById("result");
+            var result = nmberInput / nmberInput_1;
+            resultElement.innerHTML = "Результат: " + result;
+            num.push(result);
+        }
+        function calc_3(){
+            var nmberInput = document.getElementById("nmberInput").value;
+            var nmberInput_1 = document.getElementById("nmberInput_1").value;
+            var resultElement = document.getElementById("result");
+            var result = nmberInput - nmberInput_1;
+            resultElement.innerHTML = "Результат: " + result;
+            num.push(result);
+        }
+        function calc_4(){
+            var nmberInput = document.getElementById("nmberInput").value;
+            var nmberInput_1 = document.getElementById("nmberInput_1").value;
+            var resultElement = document.getElementById("result");
+            var result = Number(nmberInput) + Number(nmberInput_1);
+            resultElement.innerHTML = "Результат: " + result;
+            num.push(result);
+        }        
+        function save(){
+            console.log(num);
+            var res = document.getElementById("res");
+            res.innerHTML = "Массив: " + num
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <h1>Калькулятор</h1>
+    <h4>Первое число:</h4><input type="number" id = "nmberInput">
+    <h4>Второе число:</h4><input type="number" id = "nmberInput_1">
+    <br><br><br>
+    <button onclick = "calc_1()">Умножение</button>
+    <button onclick = "calc_2()">Деление</button>
+    <button onclick = "calc_3()">Вычитание</button>
+    <button onclick = "calc_4()">Сложение</button>
+    <button onclick = "save()">СОХРАНИТЬ</button><br><hr>
+    <div id = "result"></div>
+    <div id = "res"></div>
+ 
+    
+
+
+</body>
+</html>

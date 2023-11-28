@@ -81,103 +81,103 @@
 // }
 
 
-let a = prompt("Введите строку")
-s = a.length
+// let a = prompt("Введите строку")
+// s = a.length
 
-for (let i = s; i>0; i--){
-    console.log(a.charAt(i))
-}
-
-
-function coll(){
-    let a = prompt("Число для Гипотезы Коллатца")
-    while (a != 1){
-        if (a % 2 == 0){
-            a = a / 2
-        }else{
-            a = ((a * 3) + 1)
-        }
-    console.log(a)
-}
-}
+// for (let i = s; i>0; i--){
+//     console.log(a.charAt(i))
+// }
 
 
-let name = prompt("Напишите имя")
-let age = prompt("Уточните возраст")
+// function coll(){
+//     let a = prompt("Число для Гипотезы Коллатца")
+//     while (a != 1){
+//         if (a % 2 == 0){
+//             a = a / 2
+//         }else{
+//             a = ((a * 3) + 1)
+//         }
+//     console.log(a)
+// }
+// }
 
-function name_age(){
 
-    l = name + " имеет возраст " + age + " и он зрелый "
-    console.log(l)
-    coll()
-}
-name_age()
+// let name = prompt("Напишите имя")
+// let age = prompt("Уточните возраст")
+
+// function name_age(){
+
+//     l = name + " имеет возраст " + age + " и он зрелый "
+//     console.log(l)
+//     coll()
+// }
+// name_age()
 
 
 
-function massif(){
-    let flag = true;
-    let n = prompt("Введите длину массива: ");
-    let num = [];
-    for(let i = 0; i < n; i++){
-        let m = prompt("Число: ")
-        num.push(m)
-    }
-    for(let j = 0; j < num.length; j++){
-        if (num[j] % 2 != 0) {
-            flag = false;
-            break;
-        }
-    }
+// function massif(){
+//     let flag = true;
+//     let n = prompt("Введите длину массива: ");
+//     let num = [];
+//     for(let i = 0; i < n; i++){
+//         let m = prompt("Число: ")
+//         num.push(m)
+//     }
+//     for(let j = 0; j < num.length; j++){
+//         if (num[j] % 2 != 0) {
+//             flag = false;
+//             break;
+//         }
+//     }
 
-    if (flag == false){
-        console.log('Нечетное');
-    } else {
-        console.log('Все четные');
-    }
-}
-massif()
+//     if (flag == false){
+//         console.log('Нечетное');
+//     } else {
+//         console.log('Все четные');
+//     }
+// }
+// massif()
 
-function massif(){
-    let flag = false;
-    let n = prompt("Введите длину массива: ");
-    let num = [];
-    for(let i = 0; i < n; i++){
-        let m = prompt("Число: ")
-        num.push(m)
-    }
-    for(let j = 0; j < num.length; j++){
-        if (num[j] % 2 != 0) {
-            flag = true;
-            break;
-        }
-    }
+// function massif(){
+//     let flag = false;
+//     let n = prompt("Введите длину массива: ");
+//     let num = [];
+//     for(let i = 0; i < n; i++){
+//         let m = prompt("Число: ")
+//         num.push(m)
+//     }
+//     for(let j = 0; j < num.length; j++){
+//         if (num[j] % 2 != 0) {
+//             flag = true;
+//             break;
+//         }
+//     }
 
-    if (flag == true){
-        console.log('Один элемент нечетный');
-    } else {
-        console.log('Все элементы четные');
-    }
-}
-massif()
+//     if (flag == true){
+//         console.log('Один элемент нечетный');
+//     } else {
+//         console.log('Все элементы четные');
+//     }
+// }
+// massif()
 
-function massif(){
-    let flag = false;
-    let n = prompt("Введите длину массива: ");
-    let num = [];
-    let num5 = [];
-    for(let i = 0; i < n; i++){
-        let m = prompt("Число: ")
-        num.push(m)
-    }
-    for(let j = 0; j < num.length; j++){
-        if (num[j] % 5 == 0) {
-            num5.push(num[j])
-        }
-    }
-    console.log(num5)
+// function massif(){
+//     let flag = false;
+//     let n = prompt("Введите длину массива: ");
+//     let num = [];
+//     let num5 = [];
+//     for(let i = 0; i < n; i++){
+//         let m = prompt("Число: ")
+//         num.push(m)
+//     }
+//     for(let j = 0; j < num.length; j++){
+//         if (num[j] % 5 == 0) {
+//             num5.push(num[j])
+//         }
+//     }
+//     console.log(num5)
 
     
-}
-massif()
+// }
+// massif()
 
