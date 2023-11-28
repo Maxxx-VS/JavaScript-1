@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let num = [];
+
+
+        function text(){
+            let textInput = document.getElementById("textInput").value;
+            let textInput_1 = document.getElementById("textInput_1");
+            
+            textInput_1.value = textInput;
+            num.push(textInput);
+            console.log(num);
+            
+
+        }
+
+
+
+        function clear(){
+            let textInput_1 = document.getElementById("textInput_1");
+            textInput_1.value = " ";
+ 
+        }
+
+    </script>
+
+</head>
+
+
+<body>
+    <h1>Калькулятор</h1>
+    <h4>Первый текст:</h4><input type="text" id = "textInput">
+    <h4>Второй текст:</h4><input type="text" id = "textInput_1">
+    <br><br><br>
+    <button onclick = "text()">Передать на второе поле</button>
+    <button onclick = "clear()">Очистить оба поля</button>
+
+ 
+    
+
+
+</body>
+</html>
