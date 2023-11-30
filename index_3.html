@@ -16,16 +16,12 @@
             textInput_1.value = textInput;
             num.push(textInput);
             console.log(num);
-            
-
         }
 
+        function clean(){
 
-
-        function clear(){
-            let textInput_1 = document.getElementById("textInput_1");
             textInput_1.value = '';
- 
+            textInput.value = ''
         }
 
     </script>
@@ -39,10 +35,7 @@
     <h4>Второй текст:</h4><input type="text" id = "textInput_1">
     <br><br><br>
     <button onclick = "text()">Передать на второе поле</button>
-    <button onclick = "clear()">Очистить оба поля</button>
-
- 
-    
+    <button onclick = "clean()">Очистить оба поля</button>
 
 
 </body>

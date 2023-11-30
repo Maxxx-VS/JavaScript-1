@@ -181,3 +181,45 @@
 // }
 // massif()
 
+
+let mas = [];
+
+function save(){
+    let textInput = document.getElementById("textInput").value;
+    mas.push(textInput);
+    console.log(mas);   
+}
+
+function activ(){
+    let textInput = document.getElementById("textInput").value;
+    var add = document.getElementById("add");
+    var del = document.getElementById("del");
+    var show = document.getElementById("show");
+    var chec = document.getElementById("chec");
+    var repl = document.getElementById("repl");
+
+    if (add.checked) {
+        mas.push(textInput)
+        console.log(mas)
+    } else if (del.checked) {
+        mas.pop(textInput)
+        console.log(mas)
+    } else if (show.checked) {
+        var res = document.getElementById("res");
+        res.innerHTML = "Массив: " + mas;
+        console.log(mas)
+    } else if (chec.checked) {
+        let new_mas = mas
+        for (let i = 0; i < new_mas.length; i++) {
+            if (new_mas[i] === textInput) {
+                console.log("YES");
+            }
+        }
+    } else {
+        let new_new_mas = mas
+        let index = textInput
+        let new_value = 'ЗАМЕНА ЭЛ-ТА'
+        new_new_mas[index] = new_value
+        console.log(new_new_mas)
+}
+}

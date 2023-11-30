@@ -3,19 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Document</title>
+    <title>LogForm</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="JS_for_city.js"></script>
 </head>
 <body>
-    
-    <p>Перед скриптом</p>
+    <h1>LogForm</h1>
 
-    <script src="JavaScript.js">
-        // alert('Привет мир');
-    </script>
-    Привет
+    <label for="city">City</label>
+    <select id="city">
+        <option>City_1</option>
+        <option>City_2</option>
+        <option>City_3</option>
+        <option>City_4</option>
+    </select><br><br>
+    <input name="login" id="username" type="login" placeholder="enter login"/><br><br>
+    <input name="password" id="password" type="password" placeholder="password login"/><br><br>
+    <button onclick = "enter()">ENTER</button>
 
-    <p>После скриптоа</p>
 
 </body>
 </html>
