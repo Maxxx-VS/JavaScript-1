@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogForm</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <script src="HW_30.11.2023.js"></script> -->
+</head>
+<body>
+    <h1>HW_30.11.2023</h1>
+    <script>
+    function factorial(){
+        let nmberInput = document.getElementById("nmberInput").value;
+        let result = Number(nmberInput) + 1;
+        let f = 1;
+        for (let i = 1; i < result; i++) {
+            f = f * i;
+            console.log(f);  
+        }
+    }
+    function direct_order(){
+        let nmberInput = document.getElementById("nmberInput").value;
+        let result = Number(nmberInput) + 1;
+        for (let j = 0; j < result; j++) {
+            console.log(j);  
+        }
+    }
+    function reverse_order(){
+        let nmberInput = document.getElementById("nmberInput").value;
+        let result = nmberInput;
+        for (let k = result; k != -1; k--) {
+            console.log(k);  
+        }
+    }
+    function reverse_number(){
+        let nmberInput = document.getElementById("nmberInput").value;
+        while (nmberInput > 0) {
+            let reverse = nmberInput % 10;
+            nmberInput = parseInt((nmberInput / 10))
+            console.log(reverse);
+        }
+    }
+    function summ_number(){
+        let total = 0;
+        let nmberInput = document.getElementById("nmberInput").value;
+        while (nmberInput > 0) {
+            let reverse = nmberInput % 10;
+            total = total + reverse;
+            nmberInput = parseInt((nmberInput / 10))
+        }
+        console.log(total);
+    }
+    function bracets(){
+        let nmberInput = document.getElementById("nmberInput").value;
+        let left_bracet = "(";
+        let right_bracet = ")";
+        console.log(left_bracet.repeat(nmberInput) + right_bracet.repeat(nmberInput));    
+    }
+    </script>
+    <h4>Введи число: </h4><input type="number" id = "nmberInput"><br><br><hr>
+    <button onclick = "factorial()">Вычислить факториал</button><hr>
+    <button onclick = "direct_order()">Прямой порядок</button><hr>
+    <button onclick = "reverse_order()">Обратный порядок</button><hr>
+    <button onclick = "reverse_number()">Число наоборот</button><hr>
+    <button onclick = "summ_number()">Сумма чисел</button><hr>
+    <button onclick = "bracets()">Скобки</button><hr>
+</body>
+</html>
+
