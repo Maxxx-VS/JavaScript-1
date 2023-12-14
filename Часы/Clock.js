@@ -11,6 +11,13 @@ function count_1() {
     console.log("Часов: " + hour);
     console.log("Минут: " + minute);
     console.log("Секунд: " + second);
+}
 
+function count_2() {
+    let currentDate = new Date();
+    let data_1 = document.getElementById("data_1");
+    let data_2 = document.getElementById("data_2");
+    console.log(data_1);
+    console.log (currentDate);
 }
 

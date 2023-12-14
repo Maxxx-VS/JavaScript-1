@@ -15,11 +15,11 @@
         <div id = "result_1"></div><br><br><hr><hr>
 
     <h1>СЧЕТЧИК ПО ДАТАМ</h1>
-    <h2>Введите начальную дату:</h2>
-        <h4><input type="number" id = "numberInput"></h4>
-        <h2>Введите конечную дату:</h2>
+    <h2>Введите начальную и конечную дату:</h2>
+        <input type="date" id="date_1" name="date" class="form-control" value="{{formatDate invoice.date 'DD-MM-YYYY'}}"/><br>
+        <input type="date" id="date_2" name="date" class="form-control" value="{{formatDate invoice.date 'DD-MM-YYYY'}}"/><br>
         <button onclick = "count_2()">ПОСЧИТАТЬ</button>
-        <div id = "result1"></div>
+        <div id = "result_2"></div>
         
     
 </body>
