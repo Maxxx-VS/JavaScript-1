@@ -16,8 +16,9 @@
 
     <h1>СЧЕТЧИК ПО ДАТАМ</h1>
     <h2>Введите начальную и конечную дату:</h2>
-        <input type="date" id="date_1" name="date" class="form-control" value="{{formatDate invoice.date 'DD-MM-YYYY'}}"/><br>
-        <input type="date" id="date_2" name="date" class="form-control" value="{{formatDate invoice.date 'DD-MM-YYYY'}}"/><br>
+    
+        <input type="text" id="dateInput_1" maxlength="10" value="yyyy-mm-dd"/><br>
+        <input type="text" id="dateInput_2" maxlength="10" value="yyyy-mm-dd"/><br>
         <button onclick = "count_2()">ПОСЧИТАТЬ</button>
         <div id = "result_2"></div>
         

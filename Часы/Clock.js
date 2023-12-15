@@ -15,9 +15,26 @@ function count_1() {
 
 function count_2() {
     let currentDate = new Date();
-    let data_1 = document.getElementById("data_1");
-    let data_2 = document.getElementById("data_2");
-    console.log(data_1);
-    console.log (currentDate);
-}
+    console.log ("с 1 января 1970 г.: " + Math.floor((currentDate)) + " в мил-сек.");
+    console.log ("с 1 января 1970 г.: " + Math.floor((currentDate)/1000) + " в сек.");
+    console.log ("с 1 января 1970 г.: " + Math.floor((currentDate)/60000) + " в мин.");
+    console.log ("с 1 января 1970 г.: " + Math.floor((currentDate)/3600000) + " в час.");
+    console.log ("с 1 января 1970 г.: " + Math.floor((currentDate)/86400000) + " в днях.");
 
+    let start = document.getElementById("dateInput_1").value;
+    let end = document.getElementById("dateInput_2").value;
+    console.log(start)
+    console.log(end)
+    let a = Date.parse(start);
+    let b = Date.parse(end);
+    console.log(a);
+
+    let hour = Math.floor(Math.abs(b-a)/(1000*60*60*24)*24);
+    let minute = Math.floor(Math.abs(b-a)/(1000*60*60*24)*24*60);
+    let second = Math.floor(Math.abs(b-a)/(1000*60*60*24)*24*60*60);
+
+    console.log(hour);
+    console.log(minute);
+    console.log(console);
+    result_2.innerHTML = "Разница в: <" + hour + ":" + minute + ":" + second + ">";
+}
