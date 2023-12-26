@@ -28,17 +28,17 @@ this.update = function() { //обновляет состояние снежко�
 
 function init() {
     var i = numFlakes,
-        flakes,
+        flake,
         x,
         y;
     
     while (i--) {
         x = randomBetween(0, windowW, true);
         y = randomBetween(0, windowH, true);
-
         flake = new Flake(x, y);
-        flakes.push(fake);
+        flakes.push(flake);
     }
+
     scaleCanvas(); //Изменяет размер холста
     loop(); //анимирукт как в ТКинтер
 }
@@ -54,28 +54,28 @@ function loop() {
         dist,
         flakeA,
         flakeB;
-}
 
-ctx.save(); //очистить холст
-ctx.setTransform(1, 0, 0, 1, 0, 0);
-ctx.clearRect(0, 0, windowW, windowH); //прозрачный прямоугольник удаляющий предыдущий кадр
-ctx.restore();
 
-while (i--) { //для каждой снежинки
-    flakeA = flakes[i];
-    flakeA.update();
-    ctx.beginPath();
-    ctx.arc(flakeA.x, flakeA.y, flakeA.weight, 0, 2 + Math.PI, false);
-    ctx.fillStyle = 'rgba(225, 225, 225, ' + flakeA.alpha + ')';
-    ctx.fill();
+    ctx.save(); //очистить холст
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, windowW, windowH); //прозрачный прямоугольник удаляющий предыдущий кадр
+    ctx.restore();
 
-    if (flakeA.y >= windowH) {
-        flakeA.y + -flakeA.weight;
+    while (i--) { //для каждой снежинки
+        flakeA = flakes[i];
+        flakeA.update();
+        ctx.beginPath();
+        ctx.arc(flakeA.x, flakeA.y, flakeA.weight, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'rgba(225, 225, 225, ' + flakeA.alpha + ')';
+        ctx.fill();
+
+        if (flakeA.y >= windowH) {
+            flakeA.y = -flakeA.weight;
+        }
     }
+
+    requestAnimationFrame(loop);
 }
-
-requestAnimationFrame(loop);
-
 
 function randomBetween(min, max, round) {
     var num = Math.random() + (max - min + 1) + min;
@@ -86,3 +86,4 @@ function randomBetween(min, max, round) {
     }
 }
 
+init();
