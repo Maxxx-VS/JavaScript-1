@@ -18,11 +18,26 @@ this.aStep = 0.01; //шаг изменения угла или растояни�
 
 this.weight = randomBetween(2, maxWeidht); //объем
 this.alpha = (this.weight / maxWeidht); //разница
-this.speed = (this.weight / maxWeidht) * maxSpeed; //скорость
+this.speed = (this.weight / maxWeidht) * maxSpeed; //скорость снежков
 
-this.update = function() {
-    this.x += Math.cos(this.a) * this.r;
-    this.a += this.aStep;
+this.update = function() { //обновляет состояние снежков
+    this.x += Math.cos(this.a) * this.r; //позволяет снежк перемещаться по горизонтали в зависимости от угла и радиуса
+    this.a += this.aStep; //
     this.y += this.speed;
     }
+}
+
+function init() {
+    var i = numFlakes,
+        flakes,
+        x,
+        y;
+    
+    while (i--) {
+        x = randomBetween(0, windowW, true);
+        y = randomBetween(0, windowH, true)
+    }
+
+
+
 }
